@@ -7,28 +7,31 @@ const TemplateSelector = ({ atsScore }) => {
   const dispatch = useDispatch()
 
   return (
-    <div className='flex flex-wrap items-center gap-2'>
-      <span className='text-xs font-semibold text-slate-700'>Template:</span>
+    <div className='flex flex-wrap items-center gap-1 sm:gap-2 w-full md:w-auto'>
+      <span className='text-xs font-semibold text-slate-700 hidden sm:inline'>
+        Template:
+      </span>
       <Button
         size='small'
         type={templateId === 'ats-minimal' ? 'primary' : 'default'}
         onClick={() => dispatch(setTemplate('ats-minimal'))}
-        className='rounded-md text-xs'
+        className='rounded-md text-xs flex-1 sm:flex-none'
       >
-        Minimal
+        <span className='hidden sm:inline'>Minimal</span>
+        <span className='sm:hidden'>Min</span>
       </Button>
       <Button
         size='small'
         type={templateId === 'modern' ? 'primary' : 'default'}
         onClick={() => dispatch(setTemplate('modern'))}
-        className='rounded-md text-xs'
+        className='rounded-md text-xs flex-1 sm:flex-none'
       >
         Modern
       </Button>
 
       <Tooltip title='Estimated ATS Score'>
         <span
-          className={`ml-1 inline-flex rounded-full px-2 py-0.5 text-xs font-semibold text-white transition-all ${
+          className={`ml-auto sm:ml-1 inline-flex rounded-full px-2 py-0.5 text-xs font-semibold text-white transition-all ${
             atsScore > 70 ? 'bg-emerald-500' : 'bg-amber-500'
           }`}
         >

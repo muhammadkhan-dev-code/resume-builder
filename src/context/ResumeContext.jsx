@@ -8,9 +8,9 @@ export const ResumeProvider = ({ children }) => {
       lastName: 'Khan',
       email: 'muhammad.khan@example.com',
       phone: '+92 300 123 4567',
-      linkedin: 'https://linkedin.com/in/muhammadkhan',
+      linkedin: '',
       summary:
-        'Experienced professional with a proven track record of delivering high-quality results. Skilled in project management, team leadership, and strategic planning with strong technical expertise and excellent communication abilities.'
+        ''
     },
     education: [],
     experience: [],

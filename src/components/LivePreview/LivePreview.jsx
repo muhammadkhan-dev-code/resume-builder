@@ -39,20 +39,20 @@ const LivePreview = () => {
   }
 
   const sectionTitleClass =
-    'mb-1.5 mt-2 text-[11px] font-bold uppercase tracking-wide text-black border-b border-gray-300 pb-0.5 sm:text-[12px]'
+    'mb-1 mt-1.5 text-[10px] font-bold uppercase tracking-wide text-black border-b border-gray-300 pb-0.5 sm:mb-1.5 sm:mt-2 sm:text-[11px]'
 
   const sectionDivider = (
     <div className='mb-1 h-px w-full bg-gradient-to-r from-gray-300 to-transparent'></div>
   )
 
   return (
-    <div className='flex items-start justify-center overflow-y-auto p-2 sm:p-4 print:min-h-0 print:overflow-visible print:p-0'>
+    <div className='flex items-start justify-center overflow-y-auto p-1 sm:p-2 md:p-4 print:min-h-0 print:overflow-visible print:p-0'>
       <div className='box-border h-[297mm] w-full max-w-[210mm] overflow-hidden bg-white px-3 py-2 text-black shadow-lg transition-all duration-300 sm:px-6 sm:py-5 print:min-h-0 print:max-w-none print:shadow-none print:px-0 print:py-0'>
-        <header className='mb-1.5 border-b-2 border-black pb-1.5 text-center sm:pb-3'>
-          <h1 className='mb-0.5 text-xl font-bold text-black sm:text-3xl'>
+        <header className='mb-1 border-b-2 border-black pb-1 text-center sm:mb-1.5 sm:pb-2'>
+          <h1 className='mb-0.5 text-lg font-bold text-black sm:text-2xl'>
             {fullName}
           </h1>
-          <div className='flex flex-wrap items-center justify-center gap-1 text-[9px] text-black sm:gap-2 sm:text-[11px]'>
+          <div className='flex flex-wrap items-center justify-center gap-1 text-[8px] text-black sm:gap-2 sm:text-[10px]'>
             {personalInfo?.email && (
               <span className='rounded bg-gray-100 px-1 py-0.5 sm:px-2'>
                 {personalInfo.email}
